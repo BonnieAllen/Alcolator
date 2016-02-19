@@ -34,8 +34,8 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uG4-M8-xAh">
-                                <rect key="frame" x="20" y="160" width="163" height="49"/>
-                                <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="22"/>
+                                <rect key="frame" x="13" y="164" width="163" height="37"/>
+                                <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="18"/>
                                 <color key="textColor" red="0.396078431372549" green="0.0" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -45,18 +45,25 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="zd4-zh-8vn" secondAttribute="trailing" id="2bk-qy-WA4"/>
                             <constraint firstItem="Ag8-TA-lsv" firstAttribute="width" secondItem="zd4-zh-8vn" secondAttribute="width" id="CAg-Ph-IYx"/>
+                            <constraint firstItem="uG4-M8-xAh" firstAttribute="trailing" secondItem="uoy-jM-aqq" secondAttribute="trailing" constant="15" id="Cl1-RL-bg6"/>
+                            <constraint firstItem="uoy-jM-aqq" firstAttribute="top" secondItem="Ag8-TA-lsv" secondAttribute="bottom" constant="-3" id="ElO-0j-jOi"/>
                             <constraint firstItem="zd4-zh-8vn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="MFb-Le-pdL"/>
                             <constraint firstItem="uoy-jM-aqq" firstAttribute="top" secondItem="Ag8-TA-lsv" secondAttribute="bottom" constant="-3" id="MKM-gV-Gk7"/>
                             <constraint firstItem="uoy-jM-aqq" firstAttribute="centerX" secondItem="Ag8-TA-lsv" secondAttribute="centerX" id="Xh4-gi-Ucl"/>
                             <constraint firstItem="uG4-M8-xAh" firstAttribute="top" secondItem="uoy-jM-aqq" secondAttribute="bottom" constant="60" id="Y7R-fJ-VRv"/>
                             <constraint firstItem="uoy-jM-aqq" firstAttribute="top" secondItem="Ag8-TA-lsv" secondAttribute="bottom" constant="-3" id="YnF-X5-S6a"/>
                             <constraint firstItem="Ag8-TA-lsv" firstAttribute="top" secondItem="zd4-zh-8vn" secondAttribute="bottom" constant="8" id="aMd-dU-ifH"/>
+                            <constraint firstItem="uoy-jM-aqq" firstAttribute="centerX" secondItem="Ag8-TA-lsv" secondAttribute="centerX" id="cfa-kg-A4x"/>
                             <constraint firstItem="uG4-M8-xAh" firstAttribute="top" secondItem="uoy-jM-aqq" secondAttribute="bottom" constant="15" id="iKS-4J-5uk"/>
+                            <constraint firstItem="uG4-M8-xAh" firstAttribute="leading" secondItem="uoy-jM-aqq" secondAttribute="leading" constant="15" id="joy-Yv-a4I"/>
                             <constraint firstItem="Ag8-TA-lsv" firstAttribute="centerX" secondItem="zd4-zh-8vn" secondAttribute="centerX" id="r44-vo-WBz"/>
+                            <constraint firstItem="uoy-jM-aqq" firstAttribute="top" secondItem="Ag8-TA-lsv" secondAttribute="bottom" constant="-3" id="tXB-uZ-iXw"/>
                             <constraint firstItem="uG4-M8-xAh" firstAttribute="leading" secondItem="uoy-jM-aqq" secondAttribute="leading" constant="15" id="tiu-VM-Nhz"/>
                             <constraint firstItem="uG4-M8-xAh" firstAttribute="top" secondItem="uoy-jM-aqq" secondAttribute="bottom" constant="60" id="uLx-Ec-voU"/>
                             <constraint firstItem="uoy-jM-aqq" firstAttribute="top" secondItem="zd4-zh-8vn" secondAttribute="bottom" constant="35" id="ubr-ad-lBF"/>
+                            <constraint firstItem="uoy-jM-aqq" firstAttribute="centerX" secondItem="Ag8-TA-lsv" secondAttribute="centerX" id="voy-Mn-b7B"/>
                             <constraint firstItem="uG4-M8-xAh" firstAttribute="leading" secondItem="uoy-jM-aqq" secondAttribute="leading" constant="15" id="x4I-jE-LTF"/>
+                            <constraint firstItem="uG4-M8-xAh" firstAttribute="top" secondItem="uoy-jM-aqq" secondAttribute="bottom" constant="32" id="yPf-1I-gkX"/>
                             <constraint firstItem="uoy-jM-aqq" firstAttribute="centerX" secondItem="Ag8-TA-lsv" secondAttribute="centerX" id="yUP-Zx-s1f"/>
                             <constraint firstAttribute="leadingMargin" secondItem="zd4-zh-8vn" secondAttribute="leading" id="ydL-Ga-r8g"/>
                             <constraint firstItem="uG4-M8-xAh" firstAttribute="trailing" secondItem="uoy-jM-aqq" secondAttribute="trailing" constant="15" id="zOb-Be-WhD"/>
@@ -67,10 +74,17 @@
                                 <exclude reference="Y7R-fJ-VRv"/>
                                 <exclude reference="iKS-4J-5uk"/>
                                 <exclude reference="tiu-VM-Nhz"/>
+                                <exclude reference="uLx-Ec-voU"/>
+                                <exclude reference="x4I-jE-LTF"/>
+                                <exclude reference="zOb-Be-WhD"/>
                                 <exclude reference="zYy-SW-q7V"/>
+                                <exclude reference="MKM-gV-Gk7"/>
                                 <exclude reference="Xh4-gi-Ucl"/>
                                 <exclude reference="YnF-X5-S6a"/>
+                                <exclude reference="cfa-kg-A4x"/>
+                                <exclude reference="tXB-uZ-iXw"/>
                                 <exclude reference="ubr-ad-lBF"/>
+                                <exclude reference="yUP-Zx-s1f"/>
                             </mask>
                         </variation>
                         <connections>
