@@ -36,10 +36,10 @@
 }
 - (IBAction)sliderValueDidChange:(UISlider *)sender {
     NSLog(@"Slider value changed to %f", sender.value);
-    [self.beerPercentTextField resignFirstResponder];
+    // [self.beerPercentTextField resignFirstResponder];
 }
 - (IBAction)buttonPressed:(id)sender {
-    [self.beerPercentTextField resignFirstResponder];
+    // [self.beerPercentTextField resignFirstResponder];
     
     // calculate how much alcohol is in all beers
     
@@ -52,9 +52,27 @@
     // calculate the equivalent amount in wine
     
     float ouncesInOneWineGlass = 5;
+    float alcoholPercentageOfWine = 0.13;
+    float ouncesOfAlcoholPerWineGlass = ouncesInOneWineGlass * alcoholPercentageOfWine;
+    float numberOfWineGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWineGlass;
+    
+    NSString *beerText;
+    if (numberOfBeers == 1) {
+        beerText = NSLocalizedString(@"beer", @"singular beer");
+    }else {
+        beerText = NSLocalizedString(@"beers", @"plural of beer");
+    }
+    
+    NSString *wineText;
+    if (numberOfWineGlassesForEquivalentAlcoholAmount == 1) {
+        wineText = NSLocalizedString(@"glass", @"singular glass");
+    }else {
+        wineText = NSLocalizedString(@"glasses", @"pluaral of glass");
+    }
     
 }
 - (IBAction)tapGestureDidFire:(UITapGestureRecognizer *)sender {
+    // [self.beerPercentTextField resignFirstResponder];
 }
 
 @end
