@@ -39,7 +39,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="beerPercentTextField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="rNm-PX-0lo"/>
                                     <action selector="textFieldDidChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="0jg-Jr-Ggl"/>
                                 </connections>
                             </textField>
