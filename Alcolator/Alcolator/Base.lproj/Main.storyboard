@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Whiskey View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WhiskeyViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -42,12 +42,12 @@
                                     <action selector="textFieldDidChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="0jg-Jr-Ggl"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="uG4-M8-xAh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="uG4-M8-xAh">
                                 <rect key="frame" x="20" y="164" width="560" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="aN8-Io-0aY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="14"/>
                                 <color key="textColor" red="0.396078431372549" green="0.0" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -120,7 +120,115 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="541" y="415"/>
+            <point key="canvasLocation" x="799" y="425"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="M4o-gt-vE1">
+            <objects>
+                <viewController id="JMf-Zf-QXb" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qFE-5P-olb"/>
+                        <viewControllerLayoutGuide type="bottom" id="oJH-DW-iFJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Fc-i4-pen">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="8tQ-sf-M7P">
+                                <rect key="frame" x="18" y="58" width="564" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueDidChange:" destination="JMf-Zf-QXb" eventType="valueChanged" id="Gaq-NA-2vy"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lrp-bC-82F">
+                                <rect key="frame" x="219" y="85" width="163" height="47"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="30"/>
+                                <state key="normal" title="Calculate">
+                                    <color key="titleColor" red="0.13429443599999999" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="JMf-Zf-QXb" eventType="touchUpInside" id="QcP-dj-0Ge"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="% Alcohol Content per Beer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lB8-9H-VHS">
+                                <rect key="frame" x="20" y="20" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldDidChange:" destination="JMf-Zf-QXb" eventType="editingChanged" id="pTV-NI-mBq"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000596046448" translatesAutoresizingMaskIntoConstraints="NO" id="vSC-e0-gBL">
+                                <rect key="frame" x="20" y="164" width="560" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="6KC-oD-6cp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="14"/>
+                                <color key="textColor" red="0.39607843139999999" green="0.0" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="vSC-e0-gBL" firstAttribute="leading" secondItem="lrp-bC-82F" secondAttribute="leading" constant="15" id="2JJ-my-BHh"/>
+                            <constraint firstItem="lrp-bC-82F" firstAttribute="centerX" secondItem="8tQ-sf-M7P" secondAttribute="centerX" id="4qa-9Q-PXN"/>
+                            <constraint firstItem="lrp-bC-82F" firstAttribute="top" secondItem="8tQ-sf-M7P" secondAttribute="bottom" constant="-3" id="5o5-9k-M9R"/>
+                            <constraint firstItem="vSC-e0-gBL" firstAttribute="top" secondItem="lrp-bC-82F" secondAttribute="bottom" constant="32" id="7PV-Bg-MT2"/>
+                            <constraint firstItem="lB8-9H-VHS" firstAttribute="top" secondItem="qFE-5P-olb" secondAttribute="bottom" id="FdA-sH-V1L"/>
+                            <constraint firstItem="vSC-e0-gBL" firstAttribute="width" secondItem="8tQ-sf-M7P" secondAttribute="width" id="Gwv-C1-RSd"/>
+                            <constraint firstItem="lrp-bC-82F" firstAttribute="centerX" secondItem="8tQ-sf-M7P" secondAttribute="centerX" id="HTJ-pt-adZ"/>
+                            <constraint firstItem="lrp-bC-82F" firstAttribute="centerX" secondItem="8tQ-sf-M7P" secondAttribute="centerX" id="IUU-al-dxJ"/>
+                            <constraint firstItem="vSC-e0-gBL" firstAttribute="top" secondItem="lrp-bC-82F" secondAttribute="bottom" constant="15" id="J86-L6-1ZA"/>
+                            <constraint firstItem="vSC-e0-gBL" firstAttribute="trailing" secondItem="lrp-bC-82F" secondAttribute="trailing" constant="15" id="Nwk-oV-snY"/>
+                            <constraint firstItem="8tQ-sf-M7P" firstAttribute="width" secondItem="lB8-9H-VHS" secondAttribute="width" id="OGx-QN-Q1h"/>
+                            <constraint firstItem="vSC-e0-gBL" firstAttribute="trailing" secondItem="lrp-bC-82F" secondAttribute="trailing" constant="-15" id="OsA-D8-Nft"/>
+                            <constraint firstItem="vSC-e0-gBL" firstAttribute="leading" secondItem="lrp-bC-82F" secondAttribute="leading" constant="15" id="RMt-u9-cw0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lB8-9H-VHS" secondAttribute="trailing" id="St6-N2-fMQ"/>
+                            <constraint firstItem="lrp-bC-82F" firstAttribute="top" secondItem="8tQ-sf-M7P" secondAttribute="bottom" constant="-3" id="TUh-s5-2aI"/>
+                            <constraint firstItem="lrp-bC-82F" firstAttribute="top" secondItem="lB8-9H-VHS" secondAttribute="bottom" constant="35" id="XGG-lM-Qz4"/>
+                            <constraint firstItem="vSC-e0-gBL" firstAttribute="top" secondItem="lrp-bC-82F" secondAttribute="bottom" constant="60" id="Ya8-Io-4tR"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="lB8-9H-VHS" secondAttribute="leading" id="ZZT-ky-bb2"/>
+                            <constraint firstItem="lrp-bC-82F" firstAttribute="centerX" secondItem="8tQ-sf-M7P" secondAttribute="centerX" id="a9B-HN-edI"/>
+                            <constraint firstItem="vSC-e0-gBL" firstAttribute="top" secondItem="lrp-bC-82F" secondAttribute="bottom" constant="15" id="b2K-Zv-VoH"/>
+                            <constraint firstItem="vSC-e0-gBL" firstAttribute="top" secondItem="lrp-bC-82F" secondAttribute="bottom" constant="60" id="e7m-9c-K9B"/>
+                            <constraint firstItem="vSC-e0-gBL" firstAttribute="centerX" secondItem="8tQ-sf-M7P" secondAttribute="centerX" id="eIA-b4-Xz7"/>
+                            <constraint firstItem="lrp-bC-82F" firstAttribute="top" secondItem="8tQ-sf-M7P" secondAttribute="bottom" constant="-3" id="nXF-zJ-czh"/>
+                            <constraint firstItem="8tQ-sf-M7P" firstAttribute="top" secondItem="lB8-9H-VHS" secondAttribute="bottom" constant="8" id="oRQ-Za-9QS"/>
+                            <constraint firstItem="8tQ-sf-M7P" firstAttribute="centerX" secondItem="lB8-9H-VHS" secondAttribute="centerX" id="s6h-aG-Jhn"/>
+                            <constraint firstItem="lrp-bC-82F" firstAttribute="top" secondItem="8tQ-sf-M7P" secondAttribute="bottom" constant="-3" id="ucU-Ow-7Yz"/>
+                            <constraint firstItem="vSC-e0-gBL" firstAttribute="leading" secondItem="lrp-bC-82F" secondAttribute="leading" constant="15" id="wTG-2c-JcU"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2JJ-my-BHh"/>
+                                <exclude reference="J86-L6-1ZA"/>
+                                <exclude reference="Nwk-oV-snY"/>
+                                <exclude reference="OsA-D8-Nft"/>
+                                <exclude reference="RMt-u9-cw0"/>
+                                <exclude reference="Ya8-Io-4tR"/>
+                                <exclude reference="b2K-Zv-VoH"/>
+                                <exclude reference="e7m-9c-K9B"/>
+                                <exclude reference="wTG-2c-JcU"/>
+                                <exclude reference="4qa-9Q-PXN"/>
+                                <exclude reference="5o5-9k-M9R"/>
+                                <exclude reference="HTJ-pt-adZ"/>
+                                <exclude reference="TUh-s5-2aI"/>
+                                <exclude reference="XGG-lM-Qz4"/>
+                                <exclude reference="a9B-HN-edI"/>
+                                <exclude reference="nXF-zJ-czh"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="beerCountSlider" destination="8tQ-sf-M7P" id="B3F-h2-MlI"/>
+                        <outlet property="beerPercentTextField" destination="lB8-9H-VHS" id="Ncr-bE-8p8"/>
+                        <outlet property="resultLabel" destination="vSC-e0-gBL" id="OA2-HL-0HL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Oh-Jz-NOW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="182" y="425"/>
         </scene>
     </scenes>
 </document>
