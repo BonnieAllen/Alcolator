@@ -42,12 +42,12 @@
                                     <action selector="textFieldDidChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="0jg-Jr-Ggl"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uG4-M8-xAh">
-                                <rect key="frame" x="234" y="164" width="133" height="38"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="uG4-M8-xAh">
+                                <rect key="frame" x="20" y="164" width="560" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="aN8-Io-0aY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="14"/>
                                 <color key="textColor" red="0.396078431372549" green="0.0" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -56,11 +56,13 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="zd4-zh-8vn" secondAttribute="trailing" id="2bk-qy-WA4"/>
+                            <constraint firstItem="uG4-M8-xAh" firstAttribute="centerX" secondItem="Ag8-TA-lsv" secondAttribute="centerX" id="324-7m-oGJ"/>
                             <constraint firstItem="Ag8-TA-lsv" firstAttribute="width" secondItem="zd4-zh-8vn" secondAttribute="width" id="CAg-Ph-IYx"/>
                             <constraint firstItem="uG4-M8-xAh" firstAttribute="trailing" secondItem="uoy-jM-aqq" secondAttribute="trailing" constant="-15" id="Cl1-RL-bg6"/>
                             <constraint firstItem="uoy-jM-aqq" firstAttribute="top" secondItem="Ag8-TA-lsv" secondAttribute="bottom" constant="-3" id="ElO-0j-jOi"/>
                             <constraint firstItem="zd4-zh-8vn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="MFb-Le-pdL"/>
                             <constraint firstItem="uoy-jM-aqq" firstAttribute="top" secondItem="Ag8-TA-lsv" secondAttribute="bottom" constant="-3" id="MKM-gV-Gk7"/>
+                            <constraint firstItem="uG4-M8-xAh" firstAttribute="width" secondItem="Ag8-TA-lsv" secondAttribute="width" id="N7B-HZ-izv"/>
                             <constraint firstItem="uoy-jM-aqq" firstAttribute="centerX" secondItem="Ag8-TA-lsv" secondAttribute="centerX" id="Xh4-gi-Ucl"/>
                             <constraint firstItem="uG4-M8-xAh" firstAttribute="top" secondItem="uoy-jM-aqq" secondAttribute="bottom" constant="60" id="Y7R-fJ-VRv"/>
                             <constraint firstItem="uoy-jM-aqq" firstAttribute="top" secondItem="Ag8-TA-lsv" secondAttribute="bottom" constant="-3" id="YnF-X5-S6a"/>
@@ -83,6 +85,15 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="Cl1-RL-bg6"/>
+                                <exclude reference="Y7R-fJ-VRv"/>
+                                <exclude reference="iKS-4J-5uk"/>
+                                <exclude reference="joy-Yv-a4I"/>
+                                <exclude reference="tiu-VM-Nhz"/>
+                                <exclude reference="uLx-Ec-voU"/>
+                                <exclude reference="x4I-jE-LTF"/>
+                                <exclude reference="zOb-Be-WhD"/>
+                                <exclude reference="zYy-SW-q7V"/>
                                 <exclude reference="MKM-gV-Gk7"/>
                                 <exclude reference="Xh4-gi-Ucl"/>
                                 <exclude reference="YnF-X5-S6a"/>
@@ -90,13 +101,6 @@
                                 <exclude reference="tXB-uZ-iXw"/>
                                 <exclude reference="ubr-ad-lBF"/>
                                 <exclude reference="yUP-Zx-s1f"/>
-                                <exclude reference="Y7R-fJ-VRv"/>
-                                <exclude reference="iKS-4J-5uk"/>
-                                <exclude reference="tiu-VM-Nhz"/>
-                                <exclude reference="uLx-Ec-voU"/>
-                                <exclude reference="x4I-jE-LTF"/>
-                                <exclude reference="zOb-Be-WhD"/>
-                                <exclude reference="zYy-SW-q7V"/>
                             </mask>
                         </variation>
                         <connections>
