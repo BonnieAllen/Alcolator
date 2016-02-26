@@ -20,6 +20,9 @@
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ag8-TA-lsv">
                                 <rect key="frame" x="18" y="58" width="564" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="NBx-JW-0Br"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoy-jM-aqq">
                                 <rect key="frame" x="219" y="85" width="163" height="47"/>
@@ -27,15 +30,24 @@
                                 <state key="normal" title="Calculate">
                                     <color key="titleColor" red="0.13429443595618207" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M7o-2s-4cs"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="% Alcohol Content per Beer" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zd4-zh-8vn">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="% Alcohol Content per Beer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zd4-zh-8vn">
                                 <rect key="frame" x="20" y="20" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldDidChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="0jg-Jr-Ggl"/>
+                                </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uG4-M8-xAh">
-                                <rect key="frame" x="13" y="164" width="163" height="37"/>
-                                <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="uG4-M8-xAh">
+                                <rect key="frame" x="20" y="164" width="560" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="aN8-Io-0aY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="14"/>
                                 <color key="textColor" red="0.396078431372549" green="0.0" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -44,11 +56,13 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="zd4-zh-8vn" secondAttribute="trailing" id="2bk-qy-WA4"/>
+                            <constraint firstItem="uG4-M8-xAh" firstAttribute="centerX" secondItem="Ag8-TA-lsv" secondAttribute="centerX" id="324-7m-oGJ"/>
                             <constraint firstItem="Ag8-TA-lsv" firstAttribute="width" secondItem="zd4-zh-8vn" secondAttribute="width" id="CAg-Ph-IYx"/>
-                            <constraint firstItem="uG4-M8-xAh" firstAttribute="trailing" secondItem="uoy-jM-aqq" secondAttribute="trailing" constant="15" id="Cl1-RL-bg6"/>
+                            <constraint firstItem="uG4-M8-xAh" firstAttribute="trailing" secondItem="uoy-jM-aqq" secondAttribute="trailing" constant="-15" id="Cl1-RL-bg6"/>
                             <constraint firstItem="uoy-jM-aqq" firstAttribute="top" secondItem="Ag8-TA-lsv" secondAttribute="bottom" constant="-3" id="ElO-0j-jOi"/>
                             <constraint firstItem="zd4-zh-8vn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="MFb-Le-pdL"/>
                             <constraint firstItem="uoy-jM-aqq" firstAttribute="top" secondItem="Ag8-TA-lsv" secondAttribute="bottom" constant="-3" id="MKM-gV-Gk7"/>
+                            <constraint firstItem="uG4-M8-xAh" firstAttribute="width" secondItem="Ag8-TA-lsv" secondAttribute="width" id="N7B-HZ-izv"/>
                             <constraint firstItem="uoy-jM-aqq" firstAttribute="centerX" secondItem="Ag8-TA-lsv" secondAttribute="centerX" id="Xh4-gi-Ucl"/>
                             <constraint firstItem="uG4-M8-xAh" firstAttribute="top" secondItem="uoy-jM-aqq" secondAttribute="bottom" constant="60" id="Y7R-fJ-VRv"/>
                             <constraint firstItem="uoy-jM-aqq" firstAttribute="top" secondItem="Ag8-TA-lsv" secondAttribute="bottom" constant="-3" id="YnF-X5-S6a"/>
@@ -71,8 +85,10 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="Cl1-RL-bg6"/>
                                 <exclude reference="Y7R-fJ-VRv"/>
                                 <exclude reference="iKS-4J-5uk"/>
+                                <exclude reference="joy-Yv-a4I"/>
                                 <exclude reference="tiu-VM-Nhz"/>
                                 <exclude reference="uLx-Ec-voU"/>
                                 <exclude reference="x4I-jE-LTF"/>
@@ -91,9 +107,18 @@
                             <outletCollection property="gestureRecognizers" destination="A6b-to-Pnf" appends="YES" id="KSV-Uz-St4"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="beerCountSlider" destination="Ag8-TA-lsv" id="HCq-f0-pQO"/>
+                        <outlet property="beerPercentTextField" destination="zd4-zh-8vn" id="A2N-bF-m2h"/>
+                        <outlet property="resultLabel" destination="uG4-M8-xAh" id="giL-AK-JFw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="A6b-to-Pnf"/>
+                <tapGestureRecognizer id="A6b-to-Pnf">
+                    <connections>
+                        <action selector="tapGestureDidFire:" destination="BYZ-38-t0r" id="0Ci-sN-gBQ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="541" y="415"/>
         </scene>
