@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dNq-AS-WWT">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -120,7 +120,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="799" y="425"/>
+            <point key="canvasLocation" x="1174" y="1190"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="M4o-gt-vE1">
@@ -228,7 +228,73 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Oh-Jz-NOW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="182" y="425"/>
+            <point key="canvasLocation" x="1297" y="412"/>
+        </scene>
+        <!--Main Menu View Controller-->
+        <scene sceneID="Xek-si-4ed">
+            <objects>
+                <viewController id="wiL-hS-ELG" customClass="MainMenuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ILy-jN-HTT"/>
+                        <viewControllerLayoutGuide type="bottom" id="ws5-Ts-Tqd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ns0-eU-pEY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qfd-M2-3MP">
+                                <rect key="frame" x="248" y="104" width="105" height="73"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="50"/>
+                                <state key="normal" title="Wine">
+                                    <color key="titleColor" red="0.44705882352941173" green="0.18431372549019609" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JMf-Zf-QXb" kind="show" id="qsX-pf-CBQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0DS-aR-T4r">
+                                <rect key="frame" x="217" y="197" width="166" height="73"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="50"/>
+                                <state key="normal" title="Whiskey">
+                                    <color key="titleColor" red="0.70196078431372544" green="0.40784313725490196" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="PAn-JU-6wR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="0DS-aR-T4r" firstAttribute="centerX" secondItem="ns0-eU-pEY" secondAttribute="centerX" id="MVH-ba-uIG"/>
+                            <constraint firstItem="0DS-aR-T4r" firstAttribute="top" secondItem="Qfd-M2-3MP" secondAttribute="bottom" constant="20" id="Upb-am-O3a"/>
+                            <constraint firstItem="Qfd-M2-3MP" firstAttribute="top" secondItem="ILy-jN-HTT" secondAttribute="bottom" constant="40" id="V42-Go-QYB"/>
+                            <constraint firstItem="0DS-aR-T4r" firstAttribute="centerX" secondItem="Qfd-M2-3MP" secondAttribute="centerX" id="eib-AN-dSe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lVF-24-OGf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rh7-WC-hV9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="604" y="412"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RzL-lJ-dOe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dNq-AS-WWT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DN6-yt-JHf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wiL-hS-ELG" kind="relationship" relationship="rootViewController" id="i5I-N6-Lz7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q2p-aa-1oB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-208" y="412"/>
         </scene>
     </scenes>
 </document>
