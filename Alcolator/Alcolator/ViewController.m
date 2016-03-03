@@ -33,11 +33,12 @@
     }
 }
 - (IBAction)sliderValueDidChange:(UISlider *)sender {
-//    NSString *alcoholicBeverageOne = @"Whiskey";
+//    NSString *alcoholicBeverageOne = @"Wine";
     NSLog(@"Slider value changed to %f", sender.value);
     [self.beerPercentTextField resignFirstResponder];
-//    self.navigationItem.title = [NSString stringWithFormat:@"%@ (%f shots)", alcoholicBeverageOne, sender.value];
-    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
+//    self.navigationItem.title = @"something";//[NSString stringWithFormat:@"%@ (%f shots)", alcoholicBeverageOne, sender.value];
+//    [self.navigationItem setTitle:@"something"];
+//    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
     
 }
 - (IBAction)buttonPressed:(id)sender {
@@ -71,9 +72,11 @@
     }else {
         wineText = NSLocalizedString(@"glasses", @"pluaral of glass");
     }
+    
     NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ (with %.2f%% alcohol) contains as much alcohol as %.1f %@ of wine.", nil), numberOfBeers, beerText, [self.beerPercentTextField.text floatValue], numberOfWineGlassesForEquivalentAlcoholAmount, wineText];
     self.resultLabel.text = resultText;
-
+    self.tabBarItem.badgeValue = [NSString stringWithFormat:@"%.0f",ceilf(numberOfWineGlassesForEquivalentAlcoholAmount)];
+//    self.tabBarItem.badgeValue = [NSString stringWithFormat:@"%.1f",numberOfWineGlassesForEquivalentAlcoholAmount];
 }
 - (IBAction)tapGestureDidFire:(UITapGestureRecognizer *)sender {
     [self.beerPercentTextField resignFirstResponder];
