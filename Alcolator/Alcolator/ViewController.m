@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.beerPercentTextField.text = @"2.5";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,6 +40,7 @@
 //    self.navigationItem.title = @"something";//[NSString stringWithFormat:@"%@ (%f shots)", alcoholicBeverageOne, sender.value];
 //    [self.navigationItem setTitle:@"something"];
 //    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
+    [self buttonPressed:self];
     
 }
 - (IBAction)buttonPressed:(id)sender {
