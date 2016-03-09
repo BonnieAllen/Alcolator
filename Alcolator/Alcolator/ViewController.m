@@ -41,6 +41,8 @@
 //    [self.navigationItem setTitle:@"something"];
 //    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
     [self buttonPressed:self];
+    
+    
 }
 - (IBAction)buttonPressed:(id)sender {
     [self.beerPercentTextField resignFirstResponder];
